@@ -31,75 +31,61 @@
 <body class="fixed-header ">
 <!-- BEGIN SIDEBPANEL-->
 <nav class="page-sidebar" data-pages="sidebar">
-    <!-- BEGIN SIDEBAR MENU TOP TRAY CONTENT-->
-    <div class="sidebar-overlay-slide from-top" id="appMenu">
-        <div class="row">
-            <div class="col-xs-6 no-padding">
-                <a href="#" class="p-l-40"><img src="assets/img/demo/social_app.svg" alt="socail">
-                </a>
-            </div>
-            <div class="col-xs-6 no-padding">
-                <a href="#" class="p-l-10"><img src="assets/img/demo/email_app.svg" alt="socail">
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6 m-t-20 no-padding">
-                <a href="#" class="p-l-40"><img src="assets/img/demo/calendar_app.svg" alt="socail">
-                </a>
-            </div>
-            <div class="col-xs-6 m-t-20 no-padding">
-                <a href="#" class="p-l-10"><img src="assets/img/demo/add_more.svg" alt="socail">
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- END SIDEBAR MENU TOP TRAY CONTENT-->
-    <!-- BEGIN SIDEBAR MENU HEADER-->
     <div class="sidebar-header">
-        <img src="assets/img/logo_white.png" alt="logo" class="brand" data-src="assets/img/logo_white.png" data-src-retina="assets/img/logo_white_2x.png" width="78" height="22">
-        <div class="sidebar-header-controls">
-            <button aria-label="Toggle Drawer" type="button" class="btn btn-icon-link invert sidebar-slide-toggle m-l-20 m-r-10" data-pages-toggle="#appMenu">
-                <i class="pg-icon">chevron_down</i>
-            </button>
+        <img src="assets/img/patriciagrimaud_white.png" alt="logo" class="brand" data-src="assets/img/patricigrimaud_white.png" data-src-retina="assets/img/patriciagrimaud_white.png" width="150" height="45">
+        <div class="sidebar-header-controls align-self-end">
             <button aria-label="Pin Menu" type="button" class="btn btn-icon-link invert d-lg-inline-block d-xlg-inline-block d-md-inline-block d-sm-none d-none" data-toggle-pin="sidebar">
                 <i class="pg-icon"></i>
             </button>
         </div>
     </div>
-    <!-- END SIDEBAR MENU HEADER-->
-    <!-- START SIDEBAR MENU -->
     <div class="sidebar-menu">
-        <!-- BEGIN SIDEBAR MENU ITEMS-->
         <ul class="menu-items">
             <li class="m-t-20 ">
-                <a href="profile.html" class="detailed">
+                <a href="profil.html" class="detailed">
                     <span class="title">Profil</span>
-                    <span class="details">Profile</span>
+                    <span class="details">Description et ambitions</span>
                 </a>
                 <span class="icon-thumbnail"><i class="pg-icon">social</i></span>
             </li>
             <li class="">
-                <a href="skills.html" class="detailed">
-                    <span class="title">Compétences</span>
-                    <span class="details">Skills</span>
+                <a href="carriere.html" class="detailed">
+                    <span class="title">Parcours</span>
+                    <span class="details">Formations et expériences</span>
                 </a>
-                <span class="icon-thumbnail"><i class="pg-icon">clipboard</i></span>
+                <span class="icon-thumbnail"><i class="pg-icon">flag</i></span>
             </li>
             <li class="">
-                <a href="achievements.html" class="detailed">
+                <a href="javascript:;" class="detailed">
+                    <span class="title">Compétences</span>
+                    <span class="details">Savoirs-faire et savoirs-être</span>
+                </a>
+                <span class="icon-thumbnail"><i class="pg-icon">clipboard</i></span>
+                <ul class="sub-menu">
+                    <li class="">
+                        <a href="competences.html">Compétences techniques</a>
+                    </li>
+                    <li class="">
+                        <a href="competences.html">Compétences humaines</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="realisations.html" class="detailed">
                     <span class="title">Réalisations</span>
-                    <span class="details">Achievements</span>
+                    <span class="details">Travaux et missions</span>
                 </a>
                 <span class="icon-thumbnail"><i class="pg-icon">effects</i></span>
             </li>
             <li class="">
-                <a href="contact.html"><span class="title">Contact</span></a>
+                <a href="contact.html" class="detailed">
+                    <span class="title">Contact</span>
+                    <span class="details">On en discute ?</span>
+                </a>
                 <span class="icon-thumbnail"><i class="pg-icon">inbox</i></span>
             </li>
         </ul>
     </div>
-    <!-- END SIDEBAR MENU -->
 </nav>
 <!-- END SIDEBAR -->
 <!-- END SIDEBPANEL-->
@@ -110,12 +96,12 @@
         <a href="#" class="btn-link toggle-sidebar d-lg-none pg-icon btn-icon-link" data-toggle="sidebar">
             menu</a>
         <div class="">
-            <div class="brand inline   ">
-                <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo.png" width="78" height="22">
+            <div class="brand inline p-l-50">
+                <a href="profil.html"><img src="assets/img/patriciagrimaud_black.png" alt="logo" data-src="assets/img/patriciagrimaud_black.png" data-src-retina="assets/img/patriciagrimaud_black.png" width="150" height="45"></a>
             </div>
             <ul class="d-lg-inline-block d-none notification-list no-margin d-lg-inline-block b-grey b-l b-r no-style p-l-20 p-r-20">
                 <li class="p-r-5 inline">
-                    <a href="#" class="header-icon  btn-icon-link">
+                    <a href="assets/cv.pdf" class="header-icon btn-icon-link" target="_blank" download>
                         <span class="hint-text small">Télécharger mon CV</span><i class="pg-icon ml-2">link_alt</i>
                     </a>
                 </li>
@@ -139,106 +125,24 @@
                     <div class="card-body d-flex flex-wrap">
                         <div class="col-lg-12 no-padding">
                             <div class="p-r-30">
-                                <h3>Django (Python)</h3>
-                                <br>
+                                <img src="assets/img/logos/django.png" class="m-b-25 m-t-15" width="100" height="100">
+                                <h3>Django</h3>
+                                <h4>Définition et utilisation dans le développement logiciel</h4>
                                 <p class="text-justify">
-                                    Django est un <b>cadriciel</b>, autrement dit un socle d’applications permettant de développer des <b>sites ou des applications web de type 2.0</b>, caractérisés par plus de <b>simplicité</b> et d'<b>interactivité</b>.
-                                    Cette boîte à outils a été conçue pour aider les développeurs. Elle simplifie leur travail et les aide à construire avec efficacité et rapidité les projets qu’ils initient.<br><br>
-                                    Dans le monde du développement logiciel, Django est un choix souvent fait en termes de technologies utilisées pour différents points. Ecrit en <b>Python</b>, il bénéficie de sa <b>puissance</b> et permet notamment la mise en oeuvre de <b>calculs scientifiques</b> et d'<b>intelligence artificielle de haut niveau</b>.<br><br>
-                                    En écrivant cette compétence, je pense évidemment à une anecdote au sein de mon entreprise d'alternance, Thales DMS. L'entreprise avait pour projet de développer un logiciel nommé SIGMA et qui devait présenter diverses fonctionnalités. Parmi elles, l'application de sanctions sur des valeurs utilisateurs saisies via des <b>calculs mathématiques</b> ou encore la création d'un <b>SPC</b> (Statistical Process Control, soit Contrôle Statistique des Procédés en français). Nombreux sont les calculs exécutés lors de l'utilisation de cette application. L'entreprise a su utiliser la <b>puissance de calcul de Python via Django</b> afin de mener à bien ce projet.<br><br>
-                                    Cette technologie a effectivement était vue comme une solution adéquate tant en termes de <b>licence (MIT)</b>, que d'<b>architecture</b>, de <b>possibilités</b> ou de <b>facilité de mise en place</b>. C'est après plus d'une année passée à développer sous ce framework que le logiciel a été mis en production. Aujourd'hui, il est largement utilisé par l'entreprise en interne et multi-site et les retours quant à la bonne exécution des fonctionnalités sont positifs.<br><br>
-                                    De mon côté, je n'avais jamais entendu parlé de Django avant SIGMA. J'ai donc dû, à l'aide de mes connaissances du langage Python, apprendre les bases et ensuite les parfaire par la pratique. Aujourd'hui, après plusieurs années d'expérience, il s'agit d'un outil que je maîtrise et que je souhaiterais réutiliser dès lors qu'une situation adéquate à cette technologie se représentera.<br><br>
-                                    Avec l'expérience que j'ai acquise aujourd'hui, je ne pourrais qu'inciter les communautés de développeurs à s'intéresser à Django et à l'utiliser dès que la situation s'y apprête. C'est d'ailleurs chose déjà faîte. L'un de mes collègues d'études a dû durant son alternance imaginer une solution logicielle pour son entreprise. Convaincu par les éloges que j'ai pu faire de cet outil, celui-ci a été proposé, adopté et même largement déployé.<br><br>
-
+                                    Django est un <b>framework open-source</b> pour les applications web développé en utilisant le langage de programmation <b>Python</b>. Il est conçu pour faciliter la création d'applications web <b>robustes</b> et <b>évolutives</b>, en offrant un ensemble de fonctionnalités avancées pour la <b>gestion de la base de données</b>, la <b>gestion des utilisateurs</b>, la <b>sécurité</b>, l'<b>administration</b> et la <b>performance</b>.<br><br>
+                                    L'une des principales caractéristiques de Django est son architecture <b>modèle-vue-template (MVT)</b>. Cette architecture sépare les différentes couches de l'application, permettant aux développeurs de concentrer sur une seule tâche à la fois et de faciliter la <b>maintenance</b> et la <b>scalabilité</b> de l'application. Le modèle gère les données de l'application, la vue gère la logique de l'application et le template gère la présentation de l'application.
+                                    Django inclut également un <b>système de gestion de base de données robuste</b> qui prend en charge de nombreux types de bases de données, tels que les <b>bases de données relationnelles et non relationnelles</b>. Il offre également un <b>système de requêtes avancé</b> qui facilite la gestion des données de l'application.<br><br>
                                 </p>
-                                <br>
+                                <h4>Mon expérience autour de cette technologie</h4>
+                                <p class="text-justify">
+                                    ...<br><br>
+                                <h4>Et demain ?</h4>
+                                <p class="text-justify">
+                                    ...<br><br>
+                                </p>
                                 <div class="inline">
                                     <a class="btn btn-info m-b-10" href="sigma.html"
                                        rel="noopener noreferrer">SIGMA</a>
-                                    <a class="btn btn-info m-b-10" href="eRescue_web.html"
-                                       rel="noopener noreferrer">e-Rescue (web)</a>
-                                    <a class="btn btn-info m-b-10" href="cinetime.html"
-                                       rel="noopener noreferrer">Cinétime</a>
-                                    <a class="btn btn-info m-b-10" href="fba.html"
-                                       rel="noopener noreferrer">FBA</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END card -->
-                </div>
-                <!-- END CONTAINER FLUID -->
-                <!-- START CONTAINER FLUID -->
-                <div class=" container-fluid   container-fixed-lg bg-white">
-                    <!-- START card -->
-                    <div class="card card-transparent">
-                        <div class="card-header  ">
-                            <div class="card-title">Mais encore ?</div>
-                        </div>
-                        <div class="card-body d-flex flex-wrap">
-                            <div class="col-lg-12 no-padding">
-                                <div class="p-r-30">
-                                    <h3>Des sites officiels sous Angular</h3>
-                                </div>
-                                <div class="col-lg-12 col-xlg-4 no-padding">
-                                    <div class="row mt-3">
-                                        <div class="col-sm-3 m-b-10">
-                                            <a href="https://www.forbes.com" target="_blank">
-                                                <div class="ar-1-1">
-                                                    <div class="widget-2 card bg-primary widget widget-loader-circle-lg no-margin">
-                                                        <div class="card-body" style="background-image: url('assets/img/logos/forbes.png'); background-size: cover">
-                                                            <div class="pull-bottom bottom-left bottom-right padding-25">
-                                                                <br>
-                                                                <p class="text-dark hint-text d-none d-lg-block d-xl-block d-none d-lg-block d-xl-block no-margin">Magazine économique américain</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-sm-3 m-b-10">
-                                            <a href="https://www.samsung.com" target="_blank">
-                                                <div class="ar-1-1">
-                                                    <div class="widget-2 card bg-primary widget widget-loader-circle-lg no-margin">
-                                                        <div class="card-body" style="background-image: url('assets/img/logos/samsung.png'); background-size: cover">
-                                                            <div class="pull-bottom bottom-left bottom-right padding-25">
-                                                                <br>
-                                                                <p class="text-dark hint-text d-none d-lg-block d-xl-block d-none d-lg-block d-xl-block no-margin">Fabricant de produits électroniques</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-sm-3 m-b-10">
-                                            <a href="https://www.paypal.com" target="_blank">
-                                                <div class="ar-1-1">
-                                                    <div class="widget-2 card bg-primary widget widget-loader-circle-lg no-margin">
-                                                        <div class="card-body" style="background-image: url('assets/img/logos/paypal.png'); background-size: cover">
-                                                            <div class="pull-bottom bottom-left bottom-right padding-25">
-                                                                <br>
-                                                                <p class="text-dark hint-text d-none d-lg-block d-xl-block d-none d-lg-block d-xl-block no-margin">Service de paiement en ligne sécurisé</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-sm-3 m-b-10">
-                                            <a href="https://www.microsoft.com" target="_blank">
-                                                <div class="ar-1-1">
-                                                    <div class="widget-2 card bg-primary widget widget-loader-circle-lg no-margin">
-                                                        <div class="card-body" style="background-image: url('assets/img/logos/microsoft.png'); background-size: cover">
-                                                            <div class="pull-bottom bottom-left bottom-right padding-25">
-                                                                <br>
-                                                                <p class="text-dark hint-text d-none d-lg-block d-xl-block d-none d-lg-block d-xl-block no-margin">Multinationale informatique américaine</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
