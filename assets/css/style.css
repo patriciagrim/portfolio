@@ -3,6 +3,7 @@
 * Override Pages default styles or create your own styles here
 
 */
+
 .jumbotron h1.large-demo-text{
 	font-size: 150px;
 }
@@ -10,4 +11,8 @@
 .icon-text-search{
 	font-size: 42px;
 	width: 150%;
+}
+
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }

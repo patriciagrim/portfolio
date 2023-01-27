@@ -1,10 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Pages - Admin Dashboard UI Kit - Blank Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <link rel="apple-touch-icon" href="pages/ico/60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta content="Meet pages - The simplest and fastest way to build web UI for your dashboard or app." name="description" />
+    <meta content="Ace" name="author" />
+    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/mapplic/css/mapplic.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/rickshaw/rickshaw.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
+    <!-- Please remove the file below for production: Contains demo classes -->
+    <link class="main-stylesheet" href="assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-
+<body class="fixed-header ">
+<!-- BEGIN SIDEBPANEL-->
+<nav class="page-sidebar" data-pages="sidebar">
+    <div class="sidebar-header">
+        <img src="assets/img/patriciagrimaud_white.png" alt="logo" class="brand" data-src="assets/img/patricigrimaud_white.png" data-src-retina="assets/img/patriciagrimaud_white.png" width="150" height="45">
+        <div class="sidebar-header-controls align-self-end">
+            <button aria-label="Pin Menu" type="button" class="btn btn-icon-link invert d-lg-inline-block d-xlg-inline-block d-md-inline-block d-sm-none d-none" data-toggle-pin="sidebar">
+                <i class="pg-icon"></i>
+            </button>
+        </div>
+    </div>
+    <div class="sidebar-menu">
+        <ul class="menu-items">
+            <li class="m-t-20 ">
+                <a href="profil.html" class="detailed">
+                    <span class="title">Profil</span>
+                    <span class="details">Description et ambitions</span>
+                </a>
+                <span class="icon-thumbnail"><i class="pg-icon">social</i></span>
+            </li>
+            <li class="">
+                <a href="carriere.html" class="detailed">
+                    <span class="title">Parcours</span>
+                    <span class="details">Formations et expériences</span>
+                </a>
+                <span class="icon-thumbnail"><i class="pg-icon">flag</i></span>
+            </li>
+            <li class="">
+                <a href="javascript:;" class="detailed">
+                    <span class="title">Compétences</span>
+                    <span class="details">Savoirs-faire et savoirs-être</span>
+                </a>
+                <span class="icon-thumbnail"><i class="pg-icon">clipboard</i></span>
+                <ul class="sub-menu">
+                    <li class="">
+                        <a href="competences.html">Voir tout</a><hr class="mt-0 mb-2 bg-white" style="opacity: 0.5">
+                    </li>
+                    <li class="">
+                        <a href="javascript:;">Compétences techniques</a>
+                        <ul class="sub-menu">
+                            <li class="">
+                                <a href="angular.html">Angular</a>
+                            </li>
+                            <li class="">
+                                <a href="postgresql.html">PostGreSQL</a>
+                            </li>
+                            <li class="">
+                                <a href="django.html">Django</a>
+                            </li>
+                            <li class="">
+                                <a href="mysql.html">MySQL</a>
+                            </li>
+                            <li class="">
+                                <a href="java.html">Java</a>
+                            </li>
+                            <li class="">
+                                <a href="java_ee.html">Java EE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:;">Compétences humaines</a>
+                        <ul class="sub-menu">
+                            <li class="">
+                                <a href="methodologies_agiles.html">Méthodologies agiles</a>
+                            </li>
+                            <li class="">
+                                <a href="communication.html">Communication</a>
+                            </li>
+                            <li class="">
+                                <a href="organisation_evenements.html">Organisation d'événements</a>
+                            </li>
+                            <li class="">
+                                <a href="animation_reunions.html">Animation de réunions</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="javascript:;" class="detailed">
+                    <span class="title">Réalisations</span>
+                    <span class="details">Travaux et missions</span>
+                </a>
+                <span class="icon-thumbnail"><i class="pg-icon">effects</i></span>
+                <ul class="sub-menu">
+                    <li class="">
+                        <a href="realisations.html">Voir tout</a><hr class="mt-0 mb-2 bg-white" style="opacity: 0.5">
+                    </li>
+                    <li class="">
+                        <a href="sigma.html">SIGMA</a>
+                    </li>
+                    <li class="">
+                        <a href="eRescue_web.html">e-Rescue (web)</a>
+                    </li>
+                    <li class="">
+                        <a href="cinetime.html">Cinétime</a>
+                    </li>
+                    <li class="">
+                        <a href="fba.html">FBA</a>
+                    </li>
+                    <li class="">
+                        <a href="eRescue_mobile.html">e-Rescue (mobile)</a>
+                    </li>
+                    <li class="">
+                        <a href="bnp_pocket.html">BNP Pocket</a>
+                    </li>
+                    <li class="">
+                        <a href="bandngine.html">BandN'Gine</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="contact.html" class="detailed">
+                    <span class="title">Contact</span>
+                    <span class="details">On en discute ?</span>
+                </a>
+                <span class="icon-thumbnail"><i class="pg-icon">inbox</i></span>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- END SIDEBAR -->
+<!-- END SIDEBPANEL-->
+<!-- START PAGE-CONTAINER -->
+<div class="page-container">
+    <!-- START HEADER -->
+    <div class="header ">
+        <a href="#" class="btn-link toggle-sidebar d-lg-none pg-icon btn-icon-link" data-toggle="sidebar">
+            menu</a>
+        <div class="">
+            <div class="brand inline p-l-50">
+                <img src="assets/img/patriciagrimaud_black.png" alt="logo" data-src="assets/img/patriciagrimaud_black.png" data-src-retina="assets/img/patriciagrimaud_black.png" width="150" height="45">
+            </div>
+            <ul class="d-lg-inline-block d-none notification-list no-margin d-lg-inline-block b-grey b-l b-r no-style p-l-20 p-r-20">
+                <li class="p-r-5 inline">
+                    <a href="#" class="header-icon  btn-icon-link">
+                        <span class="hint-text small">Télécharger mon CV</span><i class="pg-icon ml-2">link_alt</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END HEADER -->
+    <!-- START PAGE CONTENT WRAPPER -->
+    <div class="page-content-wrapper ">
+        <!-- START PAGE CONTENT -->
+        <div class="content ">
+            <!-- START CONTAINER FLUID -->
+            <div class="container-fluid container-fixed-lg">
+                <!-- END BREADCRUMB -->
+                <!-- START card -->
+                <div class="card card-transparent">
+                    <div class="card-header  ">
+                        <div class="card-title">Réalisations
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-wrap">
+                        <div class="col-lg-12 no-padding">
+                            <div class="p-r-30">
+                                <h3>BandN'Gine</h3>
+                                <i>Projet commandité par La Locomotive</i><br><br>
+                                <img src="assets/img/logos/locomotive.png" width="150" class="m-b-50"><br>
+                                <h4>Musicalement vôtre !</h4>
+                                <p class="text-justify">
+                                    La Locomotive est une association de musiques actuelles qui <b>organise des concerts</b> d'artistes plus ou moins connus, français et internationaux, dans différentes salles de concert à Bayonne. Disposant également d'un bar lors de ces représentations, l'association doit gérer énormément de tâches extrêmement <b>chronophages</b>. Le projet BandN'Gine est naît dans l'optique de <b>faciliter cette gestion</b>.
+                                    Solution de type <b>client-lourd Windows</b>, elle permet principalement de gérer tout ce qui touche aux <b>artistes</b>, aux <b>concerts</b> et au <b>budget</b> de l’association et permet aussi d’accéder à des <b>statistiques</b> détaillées.<br><br>
+                                </p>
+                                <h4>Beaucoup d'appréhension, en zone inconnue</h4>
+                                <p class="text-justify">
+                                    <b>Scrum Master</b>, j'ai eu la chance de guider une équipe de <b>5 développeurs</b> autour de la réalisation de ce projet. Ce projet était pour moi un <b>triple défi</b> et n'a donc pas été sans risques. Effectivement, il s'agissait du premier projet que je réalisais pour un <b>client réel</b>, d'une équipe de développement que je ne connaissais pas encore et d'une posture de Scrum Master que je n'avais encore jamais adoptée. Il va sans dire que cela a été <b>très formateur</b> et j'ai pu compter sur mon sens de l'<b>organisation</b> et mon sens <b>relationnel</b> pour relever le défi auprès de mon équipe.<br><br>
+                                    Avec l'utilisation de la <b><a href="methodologies_agiles.html" style="color: #5b73aa">méthodologie agile</a> Scrum</b>, nous devions régulièrement nous déplacer chez le client afin de lui présenter l'avancée du projet au fil de l'eau. Nous avons émis pour choix de nous organiser sous la forme de <b>sprints de 3 semaines</b> durant lesquels nous avions des fonctionnalités cibles à ajouter à l'existant. <br><br>
+                                <h4>Satisfaire le client, s'améliorer</h4>
+                                <p class="text-justify">
+                                    Bien évidemment, avec le recul et l'expérience que j'ai pu acquérir depuis, il va de soi que si ce projet était à refaire, certaines choses seraient faites différemment. Je mettrais peut-être plus de <b>rigueur sur les réunions d'avancées</b> avec l'équipe de développement en utilisant des <b>outils dédiés</b>. Cela permettrait de détecter plus rapidement les difficultés de chacun et d'avoir accès à un suivi plus détaillé.<br><br>
+                                    Quoiqu'il en soit, la satisfaction du client était notre principal objectif et celui-ci a été atteint. Livré en janvier 2020, l'utilité de la solution a grandement été considérée par les différents acteurs de l'association et celle-ci a donc <b>très bien été accueillie</b>.<br><br>
+                                </p>
+                                <br>
+                                <div class="inline">
+                                    <a class="btn btn-info m-b-10" href="mysql.html"
+                                       rel="noopener noreferrer">MySQL</a><br>
+                                    <a class="btn btn-info m-b-10" href="communication.html"
+                                       rel="noopener noreferrer">Communication</a>
+                                    <a class="btn btn-info m-b-10" href="organisation_evenements.html"
+                                       rel="noopener noreferrer">Organisation d'événements</a>
+                                    <a class="btn btn-info m-b-10" href="animation_reunions.html"
+                                       rel="noopener noreferrer">Animation de réunions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END card -->
+                </div>
+                <!-- END CONTAINER FLUID -->
+                <!-- START CONTAINER FLUID -->
+                <div class=" container-fluid   container-fixed-lg bg-white">
+                    <!-- START card -->
+                    <div class="card card-transparent">
+                        <div class="card-header  ">
+                            <div class="card-title">Et quoi d'autre ?</div>
+                        </div>
+                        <div class="card-body d-flex flex-wrap">
+                            <div class="col-lg-12 no-padding">
+                                <div class="p-r-30 pb-3">
+                                    <h3>Visuels de l'application</h3>
+                                </div>
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="d-flex justify-content-center">
+                                                <img class="d-block" width="800" src="assets/img/ihm/visuel_bandngine_0.png" alt="First slide">
+                                            </div>
+                                            <div class="carousel-caption d-none d-md-block pt-5 text-info">
+                                                <h4>Interface de connexion</h4>
+                                                <p>Système de compte permettant de contrôler l'accès aux données de l'association. </p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="d-flex justify-content-center">
+                                                <img class="d-block" width="800" src="assets/img/ihm/visuel_bandngine_1.png" alt="First slide">
+                                            </div>
+                                            <div class="carousel-caption d-none d-md-block pt-5 text-info">
+                                                <h4>Gestion des artistes</h4>
+                                                <p>Interface permettant de gérer et avoir une vue d'ensemble sur les données des artistes.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="d-flex justify-content-center">
+                                                <img class="d-block" width="800" src="assets/img/ihm/visuel_bandngine_2.png" alt="First slide">
+                                            </div>
+                                            <div class="carousel-caption d-none d-md-block pt-5 text-info">
+                                                <h4>Gestion des concerts</h4>
+                                                <p>Interface permettant de gérer les données d'un concert par un contrôle de la billeterie principalement.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="d-flex justify-content-center">
+                                                <img class="d-block" width="800" src="assets/img/ihm/visuel_bandngine_3.png" alt="First slide">
+                                            </div>
+                                            <div class="carousel-caption d-none d-md-block pt-5 text-info">
+                                                <h4>Gestion des dépenses</h4>
+                                                <p>Interface récapitulant l'ensemble des dépenses liées à un concert.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="d-flex justify-content-center">
+                                                <img class="d-block" width="800" src="assets/img/ihm/visuel_bandngine_4.png" alt="First slide">
+                                            </div>
+                                            <div class="carousel-caption d-none d-md-block pt-5 text-info">
+                                                <h4>Gestion du bar</h4>
+                                                <p>Interface permettant la gestion des boissons à travers l'affichage des stocks et des ventes.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="d-flex justify-content-center">
+                                                <img class="d-block" width="800" src="assets/img/ihm/visuel_bandngine_5.png" alt="First slide">
+                                            </div>
+                                            <div class="carousel-caption d-none d-md-block pt-5 text-info">
+                                                <h4>Visualisation statistique</h4>
+                                                <p>Interface affichant statistiquement la répartition du budget de l'association<br>à travers ses principaux postes de dépense et de gain d'argent.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END card -->
+                </div>
+                <!-- END CONTAINER FLUID -->
+            </div>
+        </div>
+        <!-- END PAGE CONTENT -->
+        <!-- START COPYRIGHT -->
+        <!-- START CONTAINER FLUID -->
+        <!-- START CONTAINER FLUID -->
+        <div class="container-fluid container-fixed-lg footer">
+            <div class="copyright sm-text-center">
+                <p class="small-text no-margin pull-left sm-pull-reset">
+                    ©2022 Tous droits réservés - Patricia GRIMAUD
+                    <span class="hint-text m-l-15">Ingénieure solution logicielle spécialisée dans le développement fullstack</span>
+                </p>
+                <p class="small no-margin pull-right sm-pull-reset">
+                    Bordeaux et périphérie (33)</span>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- END COPYRIGHT -->
+    </div>
+    <!-- END PAGE CONTENT WRAPPER -->
+</div>
+<!-- END PAGE CONTAINER -->
+<!-- BEGIN VENDOR JS -->
+<script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<!--  A polyfill for browsers that don't support ligatures: remove liga.js if not needed-->
+<script src="assets/plugins/liga.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/plugins/popper/umd/popper.min.js" type="text/javascript"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+<script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script type="text/javascript" src="assets/plugins/select2/js/select2.full.min.js"></script>
+<script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
+<script src="assets/plugins/nvd3/lib/d3.v3.js" type="text/javascript"></script>
+<script src="assets/plugins/nvd3/nv.d3.min.js" type="text/javascript"></script>
+<script src="assets/plugins/nvd3/src/utils.js" type="text/javascript"></script>
+<script src="assets/plugins/nvd3/src/tooltip.js" type="text/javascript"></script>
+<script src="assets/plugins/nvd3/src/interactiveLayer.js" type="text/javascript"></script>
+<script src="assets/plugins/nvd3/src/models/axis.js" type="text/javascript"></script>
+<script src="assets/plugins/nvd3/src/models/line.js" type="text/javascript"></script>
+<script src="assets/plugins/nvd3/src/models/lineWithFocusChart.js" type="text/javascript"></script>
+<script src="assets/plugins/rickshaw/rickshaw.min.js"></script>
+<script src="assets/plugins/jquery-metrojs/MetroJs.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="assets/plugins/skycons/skycons.js" type="text/javascript"></script>
+<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<!-- END VENDOR JS -->
+<!-- BEGIN CORE TEMPLATE JS -->
+<!-- BEGIN CORE TEMPLATE JS -->
+<script src="pages/js/pages.js"></script>
+<!-- END CORE TEMPLATE JS -->
+<!-- BEGIN PAGE LEVEL JS -->
+<script src="assets/js/scripts.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL JS -->
+<!-- END CORE TEMPLATE JS -->
+<!-- BEGIN PAGE LEVEL JS -->
+<script src="assets/js/charts.js" type="text/javascript"></script>
+<script src="assets/js/scripts.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL JS -->
 </body>
 </html>
