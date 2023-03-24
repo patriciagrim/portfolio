@@ -98,7 +98,7 @@
                                 <a href="creativite.html">Créativité</a>
                             </li>
                             <li class="">
-                                <a href="auto_formation.html">Auto-formation</a>
+                                <a href="autodidaxie.html">Autodidaxie</a>
                             </li>
                         </ul>
                     </li>
@@ -118,22 +118,16 @@
                         <a href="sigma.html">SIGMA</a>
                     </li>
                     <li class="">
-                        <a href="eRescue_web.html">e-Rescue (web)</a>
+                        <a href="airmaster-c.html">AirMaster-C</a>
                     </li>
                     <li class="">
-                        <a href="cinetime.html">Cinétime</a>
+                        <a href="eRescue_web.html">e-Rescue (web)</a>
                     </li>
                     <li class="">
                         <a href="fba.html">FBA</a>
                     </li>
                     <li class="">
                         <a href="eRescue_mobile.html">e-Rescue (mobile)</a>
-                    </li>
-                    <li class="">
-                        <a href="bnp_pocket.html">BNP Pocket</a>
-                    </li>
-                    <li class="">
-                        <a href="bandngine.html">BandN'Gine</a>
                     </li>
                 </ul>
             </li>
@@ -200,13 +194,13 @@
                                     Effectivement, SIGMA est une application reliée à une <b>base de données <a href="postgresql.html" style="color: #5b73aa">PostGreSQL</a></b>. Il s'est avéré cependant, après près de <b>3 ans de développement</b> et une application déjà mise en production, que nous nous sommes rendus compte que <b>des millions de données</b>, des données dites continues, n'étaient <b>pas gérées et stockées</b> par l'outil car la structure actuelle ne permettait pas de pouvoir les <b>requêter et d'obtenir des résultats en un temps acceptable</b>.<br><br>
                                     Pour cela, il a fallu que je trouve une solution. Après quelques jours de recherche, j'ai proposé tout simplement à l'équipe-projet de mettre en place <b>une deuxième base de données</b>, de type <b><a href="https://www.oracle.com/fr/database/nosql/what-is-nosql/" target="_blank" style="color: #5b73aa">NoSQL</a></b> cette fois-ci. Bien évidemment il était hors de question de recommencer ou même de modifier les travaux passés et pour cela j'ai pu compter sur l'existence d'une large gamme d'outils chez Python.
                                     J'avais effectivement proposé d'utiliser <b><a href="https://www.elastic.co/fr/elasticsearch/" target="_blank" style="color: #5b73aa">ElasticSearch</a></b> comme moteur de recherche de données à grande échelle couplé au framework <a href="https://www.djangoproject.com/" target="_blank" style="color: #5b73aa">Django</a> pour ma base de données NoSQL. C'était tout de même des millions de données qui devaient être <b>stockées, indexées et recherchées</b>. J'ai là pu compter sur l'existence d'une bibliothèque nommée <a href="https://Python-elasticsearch-dsl.readthedocs.io/en/latest/quickstart.html" target="_blank" style="color: #5b73aa">python-elasticsearch-dsl</a> et permettant de faire tout cela. L'architecture existante n'a ainsi <b>pas eu à subir de grosses modifications</b> et le <b>besoin était comblé</b>.<br><br>
-                                    Autre anecdote, concernant le projet <b>AirMaster-C</b> cette fois-ci. Les ingénieurs capteurs travaillant autour de ce radar nous faisaient part, avec l'un de mes collègues, du fait qu'ils perdaient beaucoup de temps quotidiennement à manuellement <b>piloter les bancs de tests</b>. Nous avons donc pu leur proposer en ce sens le développement d'une <b>IHM en <a href="https://www.qt.io/qt-for-python" target="_blank" style="color: #5b73aa">Python QT</a></b> qui leur permet de <b>tout piloter à distance</b> (allumer/éteindre les bancs de test, vérifier/modifier des valeurs discrètes etc.). La puissance de Python nous a permis une <b>simplicité</b> et une <b>rapidité</b> de mise en place, ce projet ayant été mené parallèlement à nos projets principaux, sur nos heures creuses.<br><br>
+                                    Autre anecdote, concernant le projet <b>AirMaster-C</b> cette fois-ci. Les ingénieurs capteurs travaillant autour de ce radar nous faisaient part, avec l'un de mes collègues, du fait qu'ils perdaient beaucoup de temps quotidiennement à manuellement <b>piloter les bancs de test</b>. Nous avons donc pu leur proposer en ce sens le développement d'une <b>IHM en <a href="https://www.qt.io/qt-for-python" target="_blank" style="color: #5b73aa">Python QT</a></b> qui leur permet de <b>tout piloter à distance</b> (allumer/éteindre les bancs de test, vérifier/modifier des valeurs discrètes etc.). La puissance de Python nous a permis une <b>simplicité</b> et une <b>rapidité</b> de mise en place, ce projet ayant été mené parallèlement à nos projets principaux, sur nos heures creuses.<br><br>
                                     Je me considère aujourd'hui comme étant de <b>niveau expert</b> pour ce langage. Les deux ans et demi passés à l'utiliser m'ont permis de parcourir les grandes lignes de cet outil et d’<b>appréhender beaucoup de ses fonctionnalités</b>. Bien évidemment, je pense être loin d'avoir expérimenté tout ce que Python a à m'offrir en tant qu'ingénieure fullstack et je garde en <b>objectif prioritaire de combler ce manque</b> au fur et à mesure en me formant auprès d'experts et en continuant à pratiquer.<br><br>
                                 <h4>Et demain ?</h4>
                                 <p class="text-justify">
                                     Je ne peux que <b>recommander l'utilisation de Python</b> au sein des projets de développement.
                                     C'est d'ailleurs ce que j'ai fait lorsque l'un de mes collègues de classe réalisait son stage de fin de bachelor au sein d'une entreprise spécialisée dans la collecte, le traitement, l'enrichissement et l'activation de la donnée B2B (Business to Business). En échangeant, il me racontait qu'on lui avait confié la charge de choisir les technologies que son équipe allait utiliser pour leur premier produit d'entreprise. Tout naturellement, je lui ai conseillé Python couplé à son framework Django pour toutes les caractéristiques significatives citées dans cet article. Il a donc proposé cette solution à son manager, celle-ci a été <b>validée et même adoptée sur d'autres projets</b>.<br><br>
-                                    Par sa <b>stabilité</b>, sa <b>communauté active</b>, sa <b>polyvalence</b>, l'existence d'un <b>grand nombre de bibliothèques</b> et de <b>frameworks</b>, il est presque certains que Python possède <b>encore de nombreuses belles années devant lui</b>.
+                                    Par sa <b>stabilité</b>, sa <b>communauté active</b>, sa <b>polyvalence</b>, l'existence d'un <b>grand nombre de bibliothèques</b> et de <b>frameworks</b>, il est presque certain que Python possède <b>encore de nombreuses belles années devant lui</b>.
                                     <br><br>
                                 </p>
                                 <div class="inline">
