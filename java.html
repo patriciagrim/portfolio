@@ -218,6 +218,243 @@
                     <!-- END card -->
                 </div>
                 <!-- END CONTAINER FLUID -->
+                <div class=" container-fluid   container-fixed-lg bg-white">
+                    <!-- START card -->
+                    <div class="card card-transparent">
+                        <div class="card-header  ">
+                            <div class="card-title">Et cela ressemble à quoi ?</div>
+                        </div>
+                        <div class="card-body d-flex flex-wrap">
+                            <div class="col-lg-12 no-padding">
+                                <div class="p-r-30 pb-3">
+                                    <h4>Code du projet <a href="eRescue.html" style="color: #5b73aa">e-Rescue</a> écrit pour l'affichage du planning des formations</h4>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <code>
+                                        <pre>
+package com.intech.erescue;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import com.google.gson.JsonObject;
+import com.intech.R;
+import com.intech.erescue.api.APICaller;
+import com.intech.erescue.api.APIExtractor;
+import com.intech.erescue.calendar.decorators.EventDecorator;
+import com.intech.erescue.calendar.decorators.HighlightWeekendsDecorator;
+import com.intech.erescue.calendar.decorators.MySelectorDecorator;
+import com.intech.erescue.calendar.decorators.OneDayDecorator;
+import com.intech.erescue.model.Event;
+import com.intech.erescue.utility.SessionUtils;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
+
+import org.threeten.bp.DayOfWeek;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.Month;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+public class TrainingCalendar extends AppCompatActivity implements OnDateSelectedListener {
+    public static final int DIALOG_QUEST_CODE = 300; //L'ID pour la requête d'un DialogBox
+    private final OneDayDecorator oneDayDecorator = new OneDayDecorator(); //La décoration principale pour les jours sélectionnés (grossissement + mise en gras)
+    MaterialCalendarView widget; //Le calendrier
+    List<&lt;Event&gt; events = new ArrayList<>(); //La liste des événements
+    private AppCompatButton btn_legend;
+    private LinearLayout legend;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.a_activity_calendar_training);
+        widget = findViewById(R.id.calendarTraining);
+        btn_legend = findViewById(R.id.btn_legend);
+        legend = findViewById(R.id.legend);
+
+        legend.setVisibility(View.GONE);
+
+        checkRank();
+        showLoader();
+
+        //Initialisation du calendrier
+        widget.setOnDateChangedListener(this);
+        widget.setShowOtherDates(MaterialCalendarView.SHOW_ALL);
+
+        //On recupère la date d'aujourd'hui
+        final LocalDate instance = LocalDate.now();
+        widget.setSelectedDate(instance);
+
+        //Paramétrage des dates minimum et maximum (1 er janvier de l'année précédente au 31 décembre de l'année suivante)
+        final LocalDate min = LocalDate.of(instance.getYear()-1, Month.JANUARY, 1);
+        final LocalDate max = LocalDate.of(instance.getYear()+1, Month.DECEMBER, 31);
+
+        //On applique les dates min/max et on paramètre le premier jour de la semaine (ici lundi mais sinon dimanche par défaut)
+        widget.state().edit().setFirstDayOfWeek(DayOfWeek.MONDAY).setMinimumDate(min).setMaximumDate(max).commit();
+
+        //On ajoute les décorations
+        widget.addDecorators(
+                //Décoration des jours sélectionnables
+                new MySelectorDecorator(this),
+                //Décoration du jour sélectionné
+                oneDayDecorator,
+                //Décoration du background des weekends
+                new HighlightWeekendsDecorator()
+        );
+
+
+        //Ajout des événements
+        APICaller callApi = new APICaller(new APICaller.AsyncResponse() {
+            @Override
+            public void processFinish(JsonObject callbackResponse) {
+                //Action à effectuer avec les données récupérées (callbackResponse)
+                events.clear();
+                hideLoader();
+                for (int i = 0; i&lt;APIExtractor.jsonLen(callbackResponse); i++){
+                    events.add(new Event(callbackResponse, i));
+                }
+                for (Event event : events) {
+                    widget.addDecorator(new EventDecorator(event.getLevelEvent(), Collections.singleton(event.getCalendarDayEvent())));
+                }
+            }
+        });
+        callApi.execute("GET_EVENT_FOR_USER", "iduser", SessionUtils.getFromSession("uid", this));
+
+        //Initialisation des ajouts d'evénement
+        ((AppCompatButton) findViewById(R.id.btn_add_event)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialogFullscreen();
+            }
+        });
+
+    }
+
+    /**
+     * Méthode qui permet de chercher le rôle de l'utilisateur actuel dans la base de données distante
+     * Cache le bouton "Ajouter un événement" s'il s'agit d'un adhérent
+     */
+    public void checkRank() {
+        APICaller callApi2 = new APICaller(new APICaller.AsyncResponse() {
+            @Override
+            public void processFinish(JsonObject callbackResponse) {
+                try {
+                    callbackResponse.get("data");
+                    System.out.println(APIExtractor.jsonExtractor(callbackResponse, 0, "nomrang"));
+                    if (APIExtractor.jsonExtractor(callbackResponse, 0, "nomrang").equals("ADHERENT")) {
+                        disableButton();
+                    }
+                } catch (Exception e) {
+                    System.err.println(e);
+                }
+            }
+        });
+        callApi2.execute("GET_USER_BY_ID", "iduser", SessionUtils.getFromSession("uid", this));
+    }
+
+    public void disableButton() {
+        AppCompatButton addEvent = findViewById(R.id.btn_add_event);
+        addEvent.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onDateSelected(
+            @NonNull MaterialCalendarView widget,
+            @NonNull CalendarDay date,
+            boolean selected) {
+
+        oneDayDecorator.setDate(date.getDate());
+        widget.invalidateDecorators();
+
+        //Si il y a au moins un événement au jour sélectionné, ouvrir la liste des événéments
+        if(isEventThisDay(date)){
+            Intent intent = new Intent(getBaseContext(), ListEventOfDay.class);
+            intent.putExtra("date", date.getDate().toString());
+            startActivity(intent);
+        }
+    }
+
+    /**
+     * Crée un Fragement pour l'ajout d'un nouveau événement (façon dialogBox)
+     * Affiche un toast si l'ajout est finalisé : "Événement ajouté"
+     */
+    private void showDialogFullscreen() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        AddEventForm newFragment = new AddEventForm();
+        newFragment.setRequestCode(DIALOG_QUEST_CODE);
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.add(android.R.id.content, newFragment).addToBackStack(null).commit();
+        newFragment.setOnCallbackResult(new AddEventForm.CallbackResult() {
+            @Override
+            public void sendResult(int requestCode, Object obj) {
+                Toast toast = Toast.makeText(getApplicationContext(), "Événement ajouté", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+    }
+
+    public void showLegend(View view){
+        if (legend.getVisibility() == View.VISIBLE) {
+            btn_legend.setText("Afficher la légende");
+            legend.setVisibility(View.GONE);
+        }
+        else {
+            btn_legend.setText("Masquer la légende");
+            legend.setVisibility(View.VISIBLE);
+        }
+    }
+
+    /**
+     * Méthode qui permet d'afficher le panel de chargement
+     */
+    public void showLoader() {
+        RelativeLayout loadingPanel = (RelativeLayout)findViewById(R.id.loadingPanel);
+        loadingPanel.setVisibility(View.VISIBLE);
+    }
+
+    /**
+     * Méthode qui permet de cacher le panel de chargement
+     */
+    public void hideLoader() {
+        RelativeLayout loadingPanel = (RelativeLayout)findViewById(R.id.loadingPanel);
+        loadingPanel.setVisibility(View.GONE);
+    }
+
+    /**
+     * Vérifie si il y a un évènement au jour entré en paramètre
+     * @param day le jour cible
+     * @return vrai si il en a au moins un, faux sinon
+     */
+    public  boolean isEventThisDay(CalendarDay day){
+        for (Event event : events) {
+            if (event.isThisDay(day)){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+                                        </pre>
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END card -->
+                </div>
             </div>
         </div>
         <!-- END PAGE CONTENT -->
